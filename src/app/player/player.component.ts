@@ -13,5 +13,4 @@ export class PlayerComponent {
   @Output() remove = new EventEmitter();
   @Output() change = new EventEmitter();
   public flag: boolean = true;
-  
 }

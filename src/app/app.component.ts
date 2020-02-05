@@ -11,13 +11,10 @@ import {AppStore} from './app.store';
 })
 export class AppComponent implements OnInit {
   constructor(private store: Store<AppStore>) {
-    // this.store.dispatch(init({state: (JSON.parse(localStorage.getItem('appStore')) || {})}));
-    // кладём стор в локалсторейдж при каждом изменении
     store.subscribe(newStore => {
       console.log(newStore);
       localStorage.setItem('appStore', JSON.stringify(newStore));
     });
-    // TODO инициализировать приложение ил локал стора
   }
 
   ngOnInit() {

@@ -40,11 +40,9 @@ export class ScoreboardComponent {
   private _selectedSort: string;
   public set selectedSort(v: string) {
     this._selectedSort = v;
-    console.log(this._selectedSort);
     this.sortedSort = this.sortedSort.sort(this.sorts[this._selectedSort]);
   }
   public get selectedSort() {
-    console.log("2");
     return this._selectedSort;
   }
   onRemovePlayer($event) {
