@@ -1,0 +1,15 @@
+<select [(ngModel)]="selectedSort">
+  <option value="rating">По рейтингу</option>
+  <option value="alphabet">По алфавиту</option>
+  <option value="date">По времени добавления</option>
+</select>
+<button (click)="reverseButton()">{{reverse?'↑':'↓'}}</button>
+<div *ngFor="let player of reversedSort">
+  <app-player [self]="player"
+              (remove)="onRemovePlayer($event)"
+              (ratingDown)="onRatingDown($event)"
+              (ratingUp)="onRatingUp($event)"
+  ></app-player>
+</div>
+<input [(ngModel)]="nameForNewPlayer"/>
+<button (click)="onAddNewPlayer()">Добавить</button>

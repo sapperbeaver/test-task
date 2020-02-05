@@ -1,0 +1,19 @@
+.player{
+    border: 1px solid black;
+    padding: 8px 4px;
+    display: inline-block;
+}
+.list{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    display: inline-block;
+    margin-top: 5px;
+    .item{
+        border-top: 1px solid black;
+        border-bottom: 1px solid black;
+        padding: 2px 4px;
+    }
+    .item + .item {
+        border-top: 0px;
+    }
+}

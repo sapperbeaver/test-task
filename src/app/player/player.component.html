@@ -1,0 +1,10 @@
+<span>{{self.name}}</span>
+<button (click)="remove.emit(self.id)">🚮</button>
+<button (click)="ratingDown.emit(self.id)">-1</button>
+<div class="rating">
+<span *ngIf="flag" (click)="flag = !flag">{{self.points}}</span>
+<span *ngIf="!flag">
+    <input type="number" [(ngModel)]="self.points" autofocus (focusout)="flag = !flag" > 
+</span>
+</div>
+<button (click)="ratingUp.emit(self.id)">+1</button>
